@@ -41,11 +41,11 @@ def  Welcome_Page(request):
     # return Response(serializer.data)
     return Response({
         'Welcome': 'Welcome to the FastHands API, Use the follwing routes below to navigate and view available resources.',
-        'See all artisans': 'http://127.0.0.1:8000/allartisans/',
-        'Register an artisan': 'http://127.0.0.1:8000/register/',
-        'Find (or update) a specific artisan by email': 'http://127.0.0.1:8000/artisan/emailaddress/',
-        'Find a specific artisan location': 'http://127.0.0.1:8000/searchlocation/enterlocation/',
-        'Delete a specific artisan': 'http://127.0.0.1:8000/artisan/enterartisanemailaddresshere/',
+        'See all artisans': 'https://franklin007.pythonanywhere.com/allartisans/',
+        'Register an artisan': 'https://franklin007.pythonanywhere.com/register/',
+        'Find (or update) a specific artisan by email': 'https://franklin007.pythonanywhere.com/artisan/emailaddress/',
+        'Find a specific artisan location': 'https://franklin007.pythonanywhere.com/searchlocation/enterlocation/',
+        'Delete a specific artisan': 'https://franklin007.pythonanywhere.com/artisan/enterartisanemailaddresshere/',
     })
     
 
@@ -183,7 +183,7 @@ def Aritisan(request, email):
         except:
                 return Response({
                     'Prompt':'Provide an email address within the URL in order to find an artisan',
-                    'URL Format': "http://127.0.0.1:8000/userdetails/enteremailaddresshere/",
+                    'URL Format': "https://franklin007.pythonanywhere.com/userdetails/enteremailaddresshere/",
                 })
     # UPDATE AN ARTISAN DATA STARTS HERE
     if request.method == 'PUT':
@@ -220,7 +220,7 @@ def Delete_Aritisan(request, email):
     
     return Response({
         'Prompt':"Provide the artisan's email address using the format below within the URL to delete",
-        'Format': "http://127.0.0.1:8000/artisan/enteremailaddresshere/",
+        'Format': "https://franklin007.pythonanywhere.com/artisan/enteremailaddresshere/",
     })
     
 
@@ -247,7 +247,7 @@ def FindLocation(request, location):
    except:
         return Response({
             'Prompt':'Provide an location within the URL in order to find an artisan',
-            'URL Format': "http://127.0.0.1:8000/userdetails/enterlocationhere/",
+            'URL Format': "https://franklin007.pythonanywhere.com/userdetails/enterlocationhere/",
         })
     # return Response('Find Location')
 

@@ -27,9 +27,9 @@ environ.Env.read_env(BASE_DIR / '.env')
 SECRET_KEY = "django-insecure-xc3zc_^2knat29-p8vv*)v7&c*c7s166)^sr3=63841!8m4)t7"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 from datetime import timedelta
 
