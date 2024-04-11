@@ -27,7 +27,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 SECRET_KEY = "django-insecure-xc3zc_^2knat29-p8vv*)v7&c*c7s166)^sr3=63841!8m4)t7"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -62,6 +62,9 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 # USE SIMPLE JWT FOR AUTH
 REST_FRAMEWORK = {
